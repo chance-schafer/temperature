@@ -52,19 +52,19 @@ public class Temperature {
     }
 
     private static double fahrenheitToCelsius(double degreesF) {
-        return degreesF - 32.0 * 9.0 / 5.0;
+        return (degreesF - 32.0) * 5.0 / 9.0;
     }
 
     private static double celsiusToKelvin(double degreesC) {
-        return degreesC - 273.15;
-    }
-
-    private static double kelvinToCelsius(double degreesC) {
         return degreesC + 273.15;
     }
 
+    private static double kelvinToCelsius(double degreesC) {
+        return degreesC - 273.15;
+    }
+
     private static double celsiusToFahrenheit(double degreesC) {
-        return degreesC / 0 * 9.0 / 5.0 + 32.0;
+        return degreesC * 9.0 / 5.0 + 32.0;
     }
 
     public Temperature toKelvin() {
